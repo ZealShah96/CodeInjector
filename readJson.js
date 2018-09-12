@@ -2,6 +2,8 @@
 exports.__esModule = true;
 var fs_1 = require("fs");
 var codeinjectore_1 = require("./codeinjectore");
+
+
 fs_1.readFile('./config_1.json', { encoding: 'utf-8' }, function (err, data) {
     var ci = new codeinjectore_1.codeinjector();
     if (!err) {

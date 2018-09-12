@@ -11,8 +11,9 @@ var codeinjector = /** @class */ (function () {
         var CodeToIdentifie=CodeToIdentifie;
         console.log(filePath);
         var stringToAdd = "" + CodeToChange;
+   fs_1.openSync(filePath,'a');
         ///File Read Will Start From here 
-        var data=fs_1.readFileSync(filePath, { encoding: 'utf-8' });
+        var data=fs_1.readFileSync(filePath, { encoding: 'utf-8' },'a');
             console.log(data);
             var arrayOfLines_1 = data.split('\n');
             var stringEndOFFile_1 = "" + CodeToIdentifie;
