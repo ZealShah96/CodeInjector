@@ -1,19 +1,20 @@
 {
     "1": {
-        "filedirectorypath": "C:\\Projects\\apps\\Student-Service\\code\\Student.Business\\Configuration",
+     
+        "filedirectorypath": "C:\\Projects\\exxat-team_2.2\\apps\\Student-Service\\code\\Exxat.Student.Business\\Configuration\\",
         "filename":"IocContainerConfiguration.cs",
-        "className":"Coordinator",
+        "className":["Contact","Consent"],
         "1": {
             "CodeToIdentifie": "//Add New Config here",
-            "CodeToChange": "services.AddScoped<IclassName, classNameService>();"
+            "CodeToChange": "services.AddScoped<IclassNameService, classNameService>();"
         },
         "2": {
             "CodeToIdentifie": "//add new region here",
-            "CodeToChange": "services.AddSingleton<IclassNameRepository>(x =>{var listOfclassNameDetails = Builder<className>.CreateListOfSize(10).All().With(y => y.className = Builder<className>.CreateNew().Build()).Build().ToList();return new classNameRepositoryMock(listOfclassNameDetails);});"
+            "CodeToChange": "services.AddSingleton<IclassNameRepository>(x =>{var listOfclassNameDetails = Builder<className>.CreateListOfSize(10).All().Build().ToList();return new classNameRepositoryMock(listOfclassNameDetails);});"
         },
         "3":{
             "CodeToIdentifie": "//add new intilization of object here",
-            "CodeToChange": "this.coordinator=new Coordinator(\"Zeal Shah is awesome!\");"
+            "CodeToChange": "this.coordinator=new Coordinator(\"Zeal Shah is an idiot!\");"
         }
     }
 }

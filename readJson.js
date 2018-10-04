@@ -4,7 +4,7 @@ var fs_1 = require("fs");
 var codeinjectore_1 = require("./codeinjectore");
 
 
-fs_1.readFile('./config_1.json', { encoding: 'utf-8' }, function (err, data) {
+fs_1.readFile('./DynamicConfigFileExample.json', { encoding: 'utf-8' }, function (err, data) {
     var ci = new codeinjectore_1.codeinjector();
     if (!err) {
        // console.log(data);
@@ -19,7 +19,10 @@ fs_1.readFile('./config_1.json', { encoding: 'utf-8' }, function (err, data) {
                 var key = _a[0], value = _a[1];
                // console.log(value);
                 if(typeof(value)=="object"){
-                ci.main(filename, filedirectorypath, className, value["CodeToChange"], value["CodeToIdentifie"]);
+                    className.forEach(element=>{
+                        ci.main(filename, filedirectorypath, element, value["CodeToChange"], value["CodeToIdentifie"]);
+                    });
+                
             }
             });
         });
