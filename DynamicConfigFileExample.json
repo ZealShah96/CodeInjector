@@ -1,7 +1,7 @@
 {
     "1": {
      
-        "filedirectorypath": "C:\\Projects\\exxat-team_2.2\\apps\\Student-Service\\code\\Exxat.Student.Business\\Configuration\\",
+        "filedirectorypath": "C:\\Projects\\apps\\Student-Service\\code\\Exxat.Student.Business\\Configuration\\",
         "filename":"IocContainerConfiguration.cs",
         "className":["Contact","Consent"],
         "1": {
