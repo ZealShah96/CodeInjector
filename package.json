@@ -1,0 +1,22 @@
+{
+  "name": "CodeInjector",
+  "version": "1.0.0",
+  "description": "",
+  "main": "codeinjectore.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node readJson.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZealShah96/CodeInjector.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZealShah96/CodeInjector/issues"
+  },
+  "homepage": "https://github.com/ZealShah96/CodeInjector#readme",
+  "dynamic_config_file":"./DynamicConfigFileExample.json"
+}
