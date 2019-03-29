@@ -1,11 +1,11 @@
 {
   "name": "CodeInjector",
   "version": "1.0.0",
-  "description": "",
+  "description": "This project will be usefull when we want to change a multiple files in single run. This project will be use full when we want to change multiple lines in single run.",
   "main": "codeinjectore.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"node readJson.js"
+    "test": "mocha ./test",
+    "start": "node readJson.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,38 @@
     "url": "https://github.com/ZealShah96/CodeInjector/issues"
   },
   "homepage": "https://github.com/ZealShah96/CodeInjector#readme",
-  "dynamic_config_file":"./DynamicConfigFileExample.json"
+  "code_injector_configs": {
+    "dynamic_config_file": "./DynamicConfigFileExample.json",
+    "fetch_data_seperate_file": true,
+    "code_injector_config_file": {
+      "1": {
+        "1": {
+          "CodeToIdentifie": "//zeal shah is pagal",
+          "CodeToChange": "services.AddScoped<IclassNameService, classNameService>();"
+        },
+        "2": {
+          "CodeToIdentifie": "//add new region here",
+          "CodeToChange": "services.AddSingleton<IclassNameRepository>(x =>{var listOfclassNameDetails = Builder<className>.CreateListOfSize(10).All().Build().ToList();return new classNameRepositoryMock(listOfclassNameDetails);});"
+        },
+        "3": {
+          "CodeToIdentifie": "//add new intilization of object here",
+          "CodeToChange": "this.coordinator=new Coordinator(\"Zeal Shah is an idiot!\");"
+        },
+        "filedirectorypath": "/home/zeal/Git Hub Live/CodeInjector",
+        "filename": "example.js",
+        "phrase": [
+          "Contact",
+          "Consent"
+        ],
+        "new_File_Create": false
+      }
+    }
+  },
+  "dependencies": {
+    "packagejsonkeyfetch": "^1.0.1"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.0.2"
+  }
 }

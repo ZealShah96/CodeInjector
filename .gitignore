@@ -3,3 +3,8 @@ config*.json
 *.ts
 
 .vscode
+DynamicConfigFileExample.json
+/node_modules/*
+example.js
+old_example.js
+DynamicConfigFileExample.json
